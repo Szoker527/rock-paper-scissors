@@ -1,6 +1,8 @@
 
 function computerPlay() {
+    
   let randNum =  Math.floor(Math.random() * 3);
+
     if (randNum === 0) {
         return "rock";
     }
@@ -9,43 +11,53 @@ function computerPlay() {
     }
     else {
         return "scissors"
-    }
+    };
+    "sdasd"
 }   
 
     function playRound(playerSelection, computerSelection) {
           
-            if (playerSelection == "rock" && computerSelection == "rock") {
-                return "Draw"
+            if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock") {
+                return alert("Draw")
             }
-            else if (playerSelection == "rock" && computerSelection == "paper") {
-                return "You lost"
+            else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
+                return alert("You lost")
             }
-            else if (playerSelection == "rock" && computerSelection == "scissors") {
-                return "You Won"
+            else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
+                return alert("You Won")
             }
-            else if (playerSelection == "paper" && computerSelection == "paper") {
-                return "Draw"
+            else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") {
+                return alert("Draw")
             }
-            else if (playerSelection == "paper" && computerSelection == "scissors") {
-                return "You lost"
+            else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
+                return alert("You lost")
             }
-            else if (playerSelection == "paper" &&  computerSelection == "rock") {
-                return "You Won"
+            else if (playerSelection.toLowerCase() == "paper" &&  computerSelection == "rock") {
+                return alert("You Won")
             }
-            else if (playerSelection == "scissors" && computerSelection == "scissors") {
-                return "Draw"
+            else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors") {
+                return alert("Draw")
             }
-            else if (playerSelection == "scissors" && computerSelection == "rock") {
-                return "You lost"
+            else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
+                return alert("You lost")
             }
-            else if (playerSelection == "scissors" &&  computerSelection == "paper") {
-                return "You Won"
+            else if (playerSelection.toLowerCase() == "scissors" &&  computerSelection == "paper") {
+                return alert("You Won")
             }
             else {
-                return "something wrong"
+                return alert("something wrong")
             }
 
     }
+
+    function game(){
+        let playerSelection = prompt("Rock?  Paper?  Scissors?")
+        
+        return playRound(playerSelection, computerSelection)
+
+    }
+
+    
 
 const computerSelection = computerPlay();
 
