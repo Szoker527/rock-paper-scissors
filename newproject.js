@@ -17,7 +17,7 @@ function computerPlay() {
 function game(){
     playerScore = 0;
     computerScore = 0;
-    FullScore = (playerScore,":", computerScore);
+    FullScore = (playerScore,computerScore);
     games();
     games();
     games();
