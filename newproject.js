@@ -15,42 +15,34 @@ function computerPlay() {
     
 }   
 function game(){
-    let score
+    playerScore = 0;
+    computerScore = 0;
+    FullScore = (playerScore,":", computerScore);
+    games();
+    games();
+    games();
+    games();
+    games();
+    console.log(alert(FullScore));
 
-    let playerSelection = prompt("Rock?  Paper?  Scissors?");
-     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-
-    playerSelection = prompt("Rock?  Paper?  Scissors?");
-     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    
-    playerSelection = prompt("Rock?  Paper?  Scissors?");
-     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    
-    playerSelection = prompt("Rock?  Paper?  Scissors?");
-     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-
-    playerSelection = prompt("Rock?  Paper?  Scissors?");
-     computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
     }
 
-function game1() {
+function games() {
     playerSelection = prompt("Rock?  Paper?  Scissors?");
+    computerSelection = computerPlay();
     let score 
     score = playRound(playerSelection, computerSelection);
 
     if (score == "You lost") {
-        alert("0:1")
+        computerScore++;
+        alert(FullScore)
     }
     else if (score == "You Won") {
-        alert("1:0")
+        playerScore++;
+        alert(FullScore)
     }
     else if (score == "Draw") {
-        alert("0:0")
+        alert(FullScore)
     }
     else {
         alert("something wrong")
@@ -61,31 +53,40 @@ function game1() {
     function playRound(playerSelection, computerSelection) {
           
             if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock") {
-                 alert("Draw")
+                alert("Draw")
+                return "Draw"
             }
             else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
-                 alert("You lost")
+                alert("You lost")
+                return "You lost"
             }
             else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-                 alert("You Won")
+                alert("You Won")
+                return "You Won"
             }
             else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") {
-                 alert("Draw")
+                alert("Draw")
+                return "Draw"
             }
             else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
-                 alert("You lost")
+                alert("You lost")
+                return "You lost"
             }
             else if (playerSelection.toLowerCase() == "paper" &&  computerSelection == "rock") {
-                 alert("You Won")
+                alert("You Won")
+                return "You Won"
             }
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors") {
-                 alert("Draw")
+                alert("Draw")
+                return "Draw"
             }
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
-                 alert("You lost")
+                alert("You lost")
+                return "You lost"
             }
             else if (playerSelection.toLowerCase() == "scissors" &&  computerSelection == "paper") {
-                 alert("You Won")
+                alert("You Won")
+                return "You Won"
             }
             else {
                  alert("something wrong")
