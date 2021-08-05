@@ -17,13 +17,23 @@ function computerPlay() {
 function game(){
     playerScore = 0;
     computerScore = 0;
-    FullScore = (playerScore,computerScore);
     games();
     games();
     games();
     games();
     games();
-    console.log(alert(FullScore));
+    FullScore = finalScore()
+    function finalScore(){
+        if (playerScore > computerScore) {
+            alert("Congrats you won!")
+        }
+        else if (playerScore < computerScore) {
+            alert("You lost!")
+        }
+        else {
+            alert("Thats suprising")
+        }
+    }
 
     }
 
@@ -35,17 +45,17 @@ function games() {
 
     if (score == "You lost") {
         computerScore++;
-        alert(FullScore)
+        alert(playerScore + ":" + computerScore)
     }
     else if (score == "You Won") {
         playerScore++;
-        alert(FullScore)
+        alert(playerScore + ":" + computerScore)
     }
     else if (score == "Draw") {
-        alert(FullScore)
+        alert(playerScore + ":" + computerScore)
     }
     else {
-        alert("something wrong")
+        alert("You can't fight with this!")
     }
 }
 
@@ -53,46 +63,45 @@ function games() {
     function playRound(playerSelection, computerSelection) {
           
             if (playerSelection.toLowerCase() == "rock" && computerSelection == "rock") {
-                alert("Draw")
+                alert("Draw! Try Again")
                 return "Draw"
             }
             else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper") {
-                alert("You lost")
+                alert("You Lose! Paper beats Rock")
                 return "You lost"
             }
             else if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors") {
-                alert("You Won")
+                alert("You Won! Rock beats Scissors")
                 return "You Won"
             }
             else if (playerSelection.toLowerCase() == "paper" && computerSelection == "paper") {
-                alert("Draw")
+                alert("Draw! Try Again")
                 return "Draw"
             }
             else if (playerSelection.toLowerCase() == "paper" && computerSelection == "scissors") {
-                alert("You lost")
+                alert("You Lose! Scissors beats Paper")
                 return "You lost"
             }
             else if (playerSelection.toLowerCase() == "paper" &&  computerSelection == "rock") {
-                alert("You Won")
+                alert("You Won! Paper beats Rock")
                 return "You Won"
             }
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "scissors") {
-                alert("Draw")
+                alert("Draw! Try Again")
                 return "Draw"
             }
             else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "rock") {
-                alert("You lost")
+                alert("You Lose! Rock beats Scissors")
                 return "You lost"
             }
             else if (playerSelection.toLowerCase() == "scissors" &&  computerSelection == "paper") {
-                alert("You Won")
+                alert("You Won! Scissors beats Paper")
                 return "You Won"
-            }
-            else {
-                 alert("something wrong")
             }
 
     }
 
 
     let computerSelection = computerPlay();
+
+    console.log(game());
