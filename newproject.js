@@ -17,6 +17,7 @@ function computerPlay() {
 function game(){
     playerScore = 0;
     computerScore = 0;
+    gameCount = 0;
     games();
     games();
     games();
@@ -42,20 +43,23 @@ function games() {
     computerSelection = computerPlay();
     let score 
     score = playRound(playerSelection, computerSelection);
-
+    
     if (score == "You lost") {
+        gameCount++;
         computerScore++;
-        alert(playerScore + ":" + computerScore)
+        alert("Game Score:" + " " + playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "You Won") {
+        gameCount++;
         playerScore++;
-        alert(playerScore + ":" + computerScore)
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "Draw") {
-        alert(playerScore + ":" + computerScore)
+        gameCount++;
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else {
-        alert("You can't fight with this!")
+        alert("You can't fight with this!" + " " + "Game Round:" + " " + gameCount)
     }
 }
 
