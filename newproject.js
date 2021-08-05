@@ -60,9 +60,35 @@ function games() {
     }
     else {
         alert("You can't fight with this!" + " " + "Game Round:" + " " + gameCount)
+        gameAgain();
     }
 }
 
+function gameAgain() {
+    playerSelection = prompt("Rock?  Paper?  Scissors?");
+    computerSelection = computerPlay();
+    let score 
+    score = playRound(playerSelection, computerSelection);
+    
+    if (score == "You lost") {
+        gameCount++;
+        computerScore++;
+        alert("Game Score:" + " " + playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+    }
+    else if (score == "You Won") {
+        gameCount++;
+        playerScore++;
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+    }
+    else if (score == "Draw") {
+        gameCount++;
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  + computerScore + " " + "Game Round:" + " " + gameCount)
+    }
+    else {
+        alert("You can't fight with this!" + " " + "Game Round:" + " " + gameCount)
+        games();
+    }
+}
 
     function playRound(playerSelection, computerSelection) {
           
