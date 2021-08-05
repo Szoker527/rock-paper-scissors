@@ -47,16 +47,19 @@ function games() {
     if (score == "You lost") {
         gameCount++;
         computerScore++;
-        alert("Game Score:" + " " + playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " + playerScore + " "  + ":" + " " 
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "You Won") {
         gameCount++;
         playerScore++;
-        alert("Game Score:" + " " +playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " " 
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "Draw") {
         gameCount++;
-        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else {
         alert("You can't fight with this!" + " " + "Game Round:" + " " + gameCount)
@@ -73,16 +76,19 @@ function gameAgain() {
     if (score == "You lost") {
         gameCount++;
         computerScore++;
-        alert("Game Score:" + " " + playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " + playerScore + " "  + ":" + " " 
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "You Won") {
         gameCount++;
         playerScore++;
-        alert("Game Score:" + " " +playerScore + " "  + ":" + " " + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " " 
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else if (score == "Draw") {
         gameCount++;
-        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  + computerScore + " " + "Game Round:" + " " + gameCount)
+        alert("Game Score:" + " " +playerScore + " "  + ":" + " "  
+        + computerScore + " " + "Game Round:" + " " + gameCount)
     }
     else {
         alert("You can't fight with this!" + " " + "Game Round:" + " " + gameCount)
